@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <persistence xmlns="http://java.sun.com/xml/ns/persistence"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                 
+                 version="1.0">  
+    <persistence-unit name="customerManager" transaction-type="RESOURCE_LOCAL">  
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>  
+          <class>entity.Book</class>  
+           <class>entity.Author</class>  
+      
+    <properties>  
+    <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>  
+    <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>  
+    <property name="hibernate.show_sql" value="true"/>  
+    <property name="hibernate.connection.username" value="root"/>  
+    <property name="hibernate.connection.password" value="root"/>  
+    <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/hs"/>  
+    <property name="hibernate.max_fetch_depth" value="3"/>  
+     <!-- <property name="hibernate.hbm2ddl.auto" value="create"/>  -->
+    <property name="hibernate.cache.use_second_level_cache" value="false" ></property>
+                                                                       
+	<property name="hibernate.search.default.directory_provider" value="org.hibernate.search.store.impl.FSDirectoryProvider" ></property>
+	<property name="hibernate.search.default.indexBase" value="c:/hsIndex" ></property>
+    
+    
+          </properties>  
+       </persistence-unit>  
+    </persistence>  
+
